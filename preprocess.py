@@ -1,8 +1,11 @@
 import librosa
 import numpy as np
 import os
+import time
 
 
+
+start = time.time()
 data_path = '/Users/seenahuang/Desktop/AudioLanguageClassifier/wav'
 
 
@@ -61,6 +64,8 @@ for i,d in enumerate(durations):
     print('train label shape: ' + str(train_y.shape)) 
     print('test shape: ' + str(test_x.shape)) 
     print('test label shape: ' + str(test_x.shape)) 
+
+print(f"Time elapsed: {time.time()-start}")
 
 
 
